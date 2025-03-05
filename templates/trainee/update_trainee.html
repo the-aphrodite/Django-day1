@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Edit Trainee</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Name:</label>
+        <input type="text" name="name" value="{{ trainee.name }}" required><br>
+        <label>Age:</label>
+        <input type="number" name="age" value="{{ trainee.age }}" required><br>
+        <label>Email:</label>
+        <input type="email" name="email" value="{{ trainee.email }}" required><br>
+        <button type="submit">Update</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Edit Course</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Title:</label>
+        <input type="text" name="title" value="{{ course.title }}" required><br>
+        <label>Duration (weeks):</label>
+        <input type="number" name="duration" value="{{ course.duration }}" required><br>
+        <button type="submit">Update</button>
+    </form>
+</div>
+{% endblock %}

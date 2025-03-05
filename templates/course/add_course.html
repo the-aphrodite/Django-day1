@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Add Course</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Title:</label>
+        <input type="text" name="title" required><br>
+        <label>Duration:</label>
+        <input type="number" name="duration" required><br>
+        <button type="submit">Add</button>
+    </form>
+</div>
+{% endblock %}
