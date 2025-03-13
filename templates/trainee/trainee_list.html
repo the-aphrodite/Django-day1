@@ -21,10 +21,7 @@
                 <td>{{ trainee.name }}</td>
                 <td>{{ trainee.age }}</td>
                 <td>{{ trainee.email }}</td>
-                <td>
-                    <a href="{% url 'update_trainee' trainee.id %}">Edit</a> |
-                    <a href="{% url 'delete_trainee' trainee.id %}">Delete</a>
-                </td>
+                <td>{{ trainee.course.title }}</td>
             </tr>
             {% endfor %}
         </tbody>
